@@ -1,1 +1,193 @@
 @import './default.less';
+
+// Colors
+@primary-color: @cyan-6;
+@info-color: @blue-6;
+@success-color: @green-6;
+@processing-color: @blue-6;
+@error-color: @red-6;
+@highlight-color: @magenta-6;
+@normal-color: @gray-5;
+
+// Text colors
+@heading-color: @geekblue-7;
+@text-color: #515885;
+@text-color-secondary: #7d84a6;
+@text-selection-bg: @primary-5;
+
+// Layout
+@layout-body-background: #f4f5f8;
+@layout-header-background: @purple-8;
+@layout-trigger-background: @purple-10;
+
+// Layout light theme
+@layout-sider-background-light: #fff;
+@layout-trigger-background-light: #fff;
+@layout-trigger-color-light: @link-color;
+
+// Backgrounds
+@background-color-light: @gray-2;
+@background-color-base: @layout-body-background;
+
+// The background colors for active and hover states for things like
+// list items or table cells.
+@item-active-bg: desaturate(@geekblue-1, 20%);
+@item-hover-bg: @gray-3;
+
+// Border color
+@border-color-base: @gray-5;
+@border-color-split: @gray-4;
+
+// Typography
+@font-family: -apple-system, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif,
+  'Apple Color Emoji', 'Segoe UI Emoji';
+@code-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+
+// LINK
+@link-color: @purple-base;
+@link-hover-color: color(~`colorPalette('@{link-color}', 5) `);
+@link-active-color: color(~`colorPalette('@{link-color}', 7) `);
+@link-hover-decoration: underline;
+
+// Buttons
+@btn-shadow: none;
+@btn-primary-shadow: none;
+@btn-text-shadow: none;
+
+@btn-default-color: @text-color-secondary;
+@btn-default-border: fade(@text-color-secondary, 40%);
+
+.ant-btn-link {
+  color: @btn-default-color;
+
+  &:hover,
+  &:focus {
+    color: @primary-color;
+    background: @background-color-light;
+  }
+}
+
+// Disabled states
+@disabled-color: #a9adc0;
+@disabled-bg: @layout-body-background;
+@disabled-color-dark: @disabled-color;
+
+// Outline
+@outline-width: 1px;
+@outline-color: @heading-color;
+
+// Shadows
+@shadow-color: fade(@text-color, 15%);
+@shadow-1-up: 0 -6px 16px -8px fade(@text-color, 8%), 0 -9px 28px 0 fade(@text-color, 5%);
+@shadow-1-down: 0 6px 16px -8px fade(@text-color, 8%), 0 9px 28px 0 fade(@text-color, 5%);
+@shadow-1-left: -6px 0 16px -8px fade(@text-color, 8%), -9px 0 28px 0 fade(@text-color, 5%);
+@shadow-1-right: 6px 0 16px -8px fade(@text-color, 8%), 9px 0 28px 0 fade(@text-color, 5%);
+@shadow-2: 0 3px 6px -4px fade(@text-color, 30%), 0 6px 16px 0 fade(@text-color, 16%);
+
+// Checkbox
+@checkbox-color: @geekblue-6;
+
+// Dropdown
+@dropdown-selected-color: @gray-3;
+
+// Radio
+@radio-dot-color: @geekblue-6;
+@radio-dot-disabled-color: fade(@disabled-color, 50%);
+
+// Radio buttons
+@radio-button-hover-color: @heading-color;
+@radio-button-active-color: @heading-color;
+@radio-disabled-button-checked-bg: shade(@geekblue-3, 5%);
+// focus & check style overrides
+.ant-radio-button-wrapper-disabled.ant-radio-button-wrapper-checked {
+  border-color: @radio-disabled-button-checked-bg;
+}
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):focus-within,
+.ant-radio-group-solid
+  .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):focus-within {
+  box-shadow: none;
+}
+
+// Input
+@input-placeholder-color: @disabled-color;
+@input-border-color: darken(@border-color-base, 5%);
+@input-hover-border-color: @geekblue-4;
+@input-icon-hover-color: @input-color;
+
+// Select
+@select-border-color: @input-border-color;
+@select-item-selected-bg: @item-active-bg;
+
+// Cascader
+@cascader-item-selected-bg: @item-active-bg;
+
+// Steps
+@steps-nav-arrow-color: fade(@text-color, 50%);
+
+// progress
+@progress-steps-item-bg: @gray-4;
+
+// Alert
+@alert-message-color: @gray-9;
+@alert-text-color: @gray-9;
+@alert-close-color: @gray-7;
+
+// Tooltip
+@tooltip-bg: #2b388f;
+
+// Modal
+@modal-mask-bg: fade(#050517, 60%);
+
+// Menu
+@menu-highlight-color: @link-color;
+@menu-item-active-bg: @purple-1;
+@menu-dark-submenu-bg: #27092c;
+@menu-dark-item-active-bg: @link-color;
+
+// Table
+@table-row-hover-bg: @table-header-bg;
+@table-selected-row-bg: @item-active-bg;
+@table-body-sort-bg: @table-row-hover-bg;
+@table-expanded-row-bg: @background-color-light;
+
+// Rate
+@rate-star-color: #ffc53d;
+
+// Card
+@card-shadow: 0 1px 2px -2px fade(@text-color, 16%), 0 3px 6px 0 fade(@text-color, 12%),
+  0 5px 12px 4px fade(@text-color, 9%);
+
+// Descriptions
+@descriptions-bg: @background-color-light;
+
+// Comment
+@comment-action-hover-color: @text-color;
+@comment-author-time-color: @disabled-color;
+
+// Tabs
+@tabs-card-active-color: @link-color;
+@tabs-ink-bar-color: @link-color;
+@tabs-highlight-color: @link-color;
+@tabs-hover-color: @link-hover-color;
+@tabs-active-color: @link-active-color;
+
+// avatar
+@avatar-bg: @disabled-color;
+
+//pagination
+@pagination-font-family: @font-family;
+
+// breadcrumb
+@breadcrumb-link-color-hover: @link-color;
+
+// Tree
+@tree-node-selected-bg: @item-active-bg;
+@tree-directory-selected-color: @text-color;
+@tree-directory-selected-bg: @tree-node-selected-bg;
+
+// List
+@list-header-background: @background-color-light;
+@list-footer-background: @list-header-background;
+
+// Motion
+@wave-animation-width: 0px;

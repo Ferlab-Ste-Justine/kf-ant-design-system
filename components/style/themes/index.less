@@ -20,14 +20,19 @@
 @layout-header-background: @purple-8;
 @layout-trigger-background: @purple-10;
 
-// Layout light theme
-@layout-sider-background-light: #fff;
-@layout-trigger-background-light: #fff;
-@layout-trigger-color-light: @link-color;
+// Disabled states
+@disabled-color: #a9adc0;
+@disabled-bg: @layout-body-background;
+@disabled-color-dark: @disabled-color;
 
 // Backgrounds
 @background-color-light: @gray-2;
 @background-color-base: @layout-body-background;
+
+// Layout light theme
+@layout-sider-background-light: #fff;
+@layout-trigger-background-light: #fff;
+@layout-trigger-color-light: @link-color;
 
 // The background colors for active and hover states for things like
 // list items or table cells.
@@ -53,7 +58,6 @@
 @btn-shadow: none;
 @btn-primary-shadow: none;
 @btn-text-shadow: none;
-
 @btn-default-color: @text-color-secondary;
 @btn-default-border: fade(@text-color-secondary, 40%);
 
@@ -66,11 +70,6 @@
     background: @background-color-light;
   }
 }
-
-// Disabled states
-@disabled-color: #a9adc0;
-@disabled-bg: @layout-body-background;
-@disabled-color-dark: @disabled-color;
 
 // Outline
 @outline-width: 1px;
